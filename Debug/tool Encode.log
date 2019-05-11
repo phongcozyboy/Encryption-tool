@@ -1,0 +1,7 @@
+﻿  Display.cpp
+d:\data structures and algorithms\ctdl\tree\tree classification\tree huffman\tree huffman\tool encode\huffman.h(42): warning C4018: '<': signed/unsigned mismatch
+d:\data structures and algorithms\ctdl\tree\tree classification\tree huffman\tree huffman\tool encode\encode.h(17): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
+d:\data structures and algorithms\ctdl\tree\tree classification\tree huffman\tree huffman\tool encode\something.h(16): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
+d:\data structures and algorithms\ctdl\tree\tree classification\tree huffman\tree huffman\tool encode\display.h(15): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
+d:\data structures and algorithms\ctdl\tree\tree classification\tree huffman\tree huffman\tool encode\display.cpp(31): warning C4018: '<': signed/unsigned mismatch
+  tool Encode.vcxproj -> D:\Data structures and algorithms\CTDL\Tree\Tree classification\Tree huffman\Tree Huffman\Debug\tool Encode.exe
