@@ -47,6 +47,7 @@ private:
 	bool returnDisplay;
 	std::string data;
 	std::string pathFile;
+	std::string pathOut;
 	std::string dataEncode;
 	std::vector<std::string> arrText;
 	Huffman *huffman;
@@ -57,6 +58,7 @@ private:
 	void getPath();
 	void display_1();
 	void display_2();
+	void display_pathFileOut();
 public:
 	Encode();
 	~Encode();

@@ -301,6 +301,7 @@ void Encode::display_1()
 	}
 
 	finText.close();
+	this->height_text = 3;
 }
 
 void Encode::display_2()
@@ -378,8 +379,87 @@ void Encode::display_2()
 		tempData.erase(tempData.begin());
 		this->data = tempData;
 	}
+	this->height_text = 3;
 }
 
+void Encode::display_pathFileOut()
+{
+	system("cls");
+	this->draw();
+
+	int height_textData = this->height_text + 1;
+
+	for (int i = 0; i < 80; i++)
+	{
+		this->gotoXY(20 + i, height_textData);
+		std::cout << "=";
+		this->gotoXY(20 + i, height_textData + 2);
+		std::cout << "=";
+	}
+	for (int i = 1; i < 79; i++)
+	{
+		this->gotoXY(20 + i, height_textData + 1);
+		std::cout << " ";
+	}
+	this->gotoXY(20, height_textData + 1);
+	std::cout << "| Path file out: ";
+	this->gotoXY(99, height_textData + 1);
+	std::cout << "|";
+
+	int tempHeight = height_textData + 1;
+	int tempWidth = 37;
+	std::string tempData;
+
+	while (!GetAsyncKeyState(VK_RETURN))
+	{
+		if (GetAsyncKeyState(VK_ESCAPE))
+		{
+			this->checkWrite = false;
+			break;
+		}
+
+		rewind(stdin);
+		this->gotoXY(tempWidth, tempHeight);
+		char c = _getch();
+
+		if (c == 8 && !tempData.empty())
+		{
+			if (tempHeight != height_textData + 1 && tempWidth == 22)
+			{
+				this->gotoXY(tempWidth--, tempHeight);
+				std::cout << " ";
+				tempHeight--;
+				tempWidth = 97;
+			}
+
+			this->gotoXY(tempWidth--, tempHeight);
+			std::cout << " ";
+			tempData.erase(tempData.end() - 1);
+		}
+		else if (!_kbhit())
+		{
+			if (!GetAsyncKeyState(VK_RETURN))
+			{
+				tempWidth++;
+				tempData.push_back(c);
+			}
+		}
+
+		for (int i = 0; i < tempData.size(); i++)
+		{
+			this->gotoXY(tempWidth, tempHeight);
+			std::cout << tempData[i];
+		}
+
+		if (tempWidth == 97)
+		{
+			tempHeight++;
+			tempWidth = 22;
+		}
+	}
+
+	if (this->checkWrite != false) this->pathOut = tempData;
+}
 
 void Encode::run()
 {
@@ -403,8 +483,10 @@ void Encode::run()
 		{
 			this->huffman = new Huffman(this->data);
 			this->dataEncode = this->huffman->getEncode();
+			
+			this->display_pathFileOut();
 
-			std::ofstream fout("ENCODE.txt", std::ios_base::out);
+			std::ofstream fout(this->pathOut, std::ios_base::out);
 
 			for (int i = 0; i < this->dataEncode.size(); i++) fout << this->dataEncode[i];
 			this->textcolor(180);
@@ -419,7 +501,6 @@ void Encode::run()
 			fout.close();
 			Sleep(2000);
 		}
-
 
 		//reset
 		this->height_text = 3;

@@ -31,7 +31,7 @@ void Display::draw()
 	for (int i = 0; i < this->arrText.size(); i++)
 	{
 		Sleep(100);
-		this->gotoXY(38, height_2text++);
+		this->gotoXY(36, height_2text++);
 		std::cout << this->arrText[i] << std::endl;
 	}
 
