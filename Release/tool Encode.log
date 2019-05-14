@@ -4,8 +4,22 @@ d:\data structures and algorithms\ctdl\tree\tree classification\tree huffman\tre
 d:\data structures and algorithms\ctdl\tree\tree classification\tree huffman\tree huffman\tool encode\something.h(16): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
 d:\data structures and algorithms\ctdl\tree\tree classification\tree huffman\tree huffman\tool encode\display.h(15): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
 d:\data structures and algorithms\ctdl\tree\tree classification\tree huffman\tree huffman\tool encode\display.cpp(31): warning C4018: '<': signed/unsigned mismatch
+  Encode.cpp
+d:\data structures and algorithms\ctdl\tree\tree classification\tree huffman\tree huffman\tool encode\huffman.h(42): warning C4018: '<': signed/unsigned mismatch
+d:\data structures and algorithms\ctdl\tree\tree classification\tree huffman\tree huffman\tool encode\encode.h(17): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
+d:\data structures and algorithms\ctdl\tree\tree classification\tree huffman\tree huffman\tool encode\encode.cpp(19): warning C4129: '_': unrecognized character escape sequence
+d:\data structures and algorithms\ctdl\tree\tree classification\tree huffman\tree huffman\tool encode\encode.cpp(34): warning C4018: '<': signed/unsigned mismatch
+d:\data structures and algorithms\ctdl\tree\tree classification\tree huffman\tree huffman\tool encode\encode.cpp(242): warning C4018: '<': signed/unsigned mismatch
+d:\data structures and algorithms\ctdl\tree\tree classification\tree huffman\tree huffman\tool encode\encode.cpp(365): warning C4018: '<': signed/unsigned mismatch
+d:\data structures and algorithms\ctdl\tree\tree classification\tree huffman\tree huffman\tool encode\encode.cpp(450): warning C4018: '<': signed/unsigned mismatch
+d:\data structures and algorithms\ctdl\tree\tree classification\tree huffman\tree huffman\tool encode\encode.cpp(495): warning C4018: '<': signed/unsigned mismatch
+  Source.cpp
+d:\data structures and algorithms\ctdl\tree\tree classification\tree huffman\tree huffman\tool encode\huffman.h(42): warning C4018: '<': signed/unsigned mismatch
+d:\data structures and algorithms\ctdl\tree\tree classification\tree huffman\tree huffman\tool encode\encode.h(17): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
+d:\data structures and algorithms\ctdl\tree\tree classification\tree huffman\tree huffman\tool encode\something.h(16): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
+d:\data structures and algorithms\ctdl\tree\tree classification\tree huffman\tree huffman\tool encode\display.h(15): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
   Generating code
-  1 of 643 functions ( 0.2%) were compiled, the rest were copied from previous compilation.
+  5 of 643 functions ( 0.8%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
     1 functions had inline decision re-evaluated but remain unchanged
   Finished generating code

@@ -45,6 +45,7 @@ private:
 	bool openDisplay_2;
 	bool checkWrite;
 	bool returnDisplay;
+	bool exitOutpath;
 	std::string data;
 	std::string pathFile;
 	std::string pathOut;

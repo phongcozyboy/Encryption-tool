@@ -9,6 +9,7 @@ Encode::Encode()
 	this->openDisplay_2 = false;
 	this->returnDisplay = false;
 	this->checkWrite = true;
+	this->exitOutpath = false;
 
 	arrText.push_back("  ______                     _      ");
 	arrText.push_back(" |  ____|                   | |     ");
@@ -415,6 +416,7 @@ void Encode::display_pathFileOut()
 		if (GetAsyncKeyState(VK_ESCAPE))
 		{
 			this->checkWrite = false;
+			this->exitOutpath = true;
 			break;
 		}
 
@@ -486,20 +488,23 @@ void Encode::run()
 			
 			this->display_pathFileOut();
 
-			std::ofstream fout(this->pathOut, std::ios_base::out);
+			if (this->exitOutpath == false)
+			{
+				std::ofstream fout(this->pathOut, std::ios_base::out);
 
-			for (int i = 0; i < this->dataEncode.size(); i++) fout << this->dataEncode[i];
-			this->textcolor(180);
-			this->gotoXY(44, 15);
-			std::cout << "                                     ";
-			this->gotoXY(44, 16);
-			std::cout << "    Write to file successfullyt !    ";
-			this->gotoXY(44, 17);
-			std::cout << "                                     ";
-			this->textcolor(3);
+				for (int i = 0; i < this->dataEncode.size(); i++) fout << this->dataEncode[i];
+				this->textcolor(180);
+				this->gotoXY(44, 15);
+				std::cout << "                                     ";
+				this->gotoXY(44, 16);
+				std::cout << "    Write to file successfullyt !    ";
+				this->gotoXY(44, 17);
+				std::cout << "                                     ";
+				this->textcolor(3);
 
-			fout.close();
-			Sleep(2000);
+				fout.close();
+				Sleep(2000);
+			}
 		}
 
 		//reset
@@ -510,6 +515,7 @@ void Encode::run()
 		this->openDisplay_1 = true;
 		this->openDisplay_2 = false;
 		this->checkWrite = true;
+		this->exitOutpath = false;
 	}
 }
 
